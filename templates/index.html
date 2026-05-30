@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gemini AI Chatbot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+</head>
+<body>
+  <div class="chat-container">
+
+    <div class="chat-header">
+      <div class="bot-avatar">🤖</div>
+      <div class="header-info">
+        <h2>Gemini AI Assistant</h2>
+        <p><span class="status-dot"></span> Online — Ready to chat</p>
+      </div>
+      <div class="header-badge">Powered by Gemini</div>
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+      <div class="welcome">
+        <span class="welcome-icon">✨</span>
+        <h3>Hello! I'm your AI Assistant</h3>
+        <p>Ask me anything or upload your resume for personalized feedback!</p>
+        <div class="suggestions">
+          <button class="suggestion-chip" onclick="suggest(this)">Review my resume</button>
+          <button class="suggestion-chip" onclick="suggest(this)">What skills should I add?</button>
+          <button class="suggestion-chip" onclick="suggest(this)">Write a Python program</button>
+          <button class="suggestion-chip" onclick="suggest(this)">Tell me a fun fact</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="chat-input">
+  <button class="plus-btn" onclick="document.getElementById('resumeFile').click()">
+    <svg viewBox="0 0 24 24"><path d="M19 13H13v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+  </button>
+  <input type="file" id="resumeFile" accept=".pdf,.doc,.docx" style="display:none" onchange="uploadResume()"/>
+  <span id="uploadStatus" class="upload-status" style="font-size:11px; color:#16a34a;"></span>
+  <input type="text" id="userInput" placeholder="Type a message..." autocomplete="off"/>
+  <button class="send-btn" onclick="sendMessage()">
+    <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/></svg>
+  </button>
+</div>
+
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
