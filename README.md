@@ -3,8 +3,6 @@
 An AI-powered conversational chatbot built with Python and Flask, 
 integrated with Google's Gemini API for intelligent, context-aware responses.
 
-![Chatbot Interface](static/screenshots/chat-interface.png)
-
 ---
 
 ## ✨ Features
