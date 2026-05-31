@@ -1,43 +1,78 @@
-# AI Chatbot using Gemini API
+# 🤖 AI Chatbot — Powered by Google Gemini
 
-## Overview
+An AI-powered conversational chatbot built with Python and Flask, 
+integrated with Google's Gemini API for intelligent, context-aware responses.
 
-An AI-powered conversational chatbot built using Python, Flask, and Google's Gemini API. The chatbot provides real-time AI-generated responses through a clean and responsive web interface.
+![Chatbot Interface](static/screenshots/chat-interface.png)
 
-## Features
+---
 
-* AI-powered conversations using Gemini API
-* Modern and responsive chat interface
-* Real-time message exchange
-* Markdown response rendering
-* Secure API key management using environment variables
-* Flask-based backend
-* Clean and user-friendly UI
+## ✨ Features
 
-## Technologies Used
+- 💬 **Multi-turn conversations** — remembers context across the chat session
+- 📄 **File upload support** — upload a resume or PDF for personalized AI analysis
+- ⚡ **Quick prompt suggestions** — one-click prompts like "Review my resume" 
+  and "Write a Python program"
+- 🔒 **Secure API key management** — keys stored via environment variables, 
+  never exposed in code
+- 📱 **Responsive UI** — works seamlessly on desktop and mobile
 
-* Python
-* Flask
-* Google Gemini API
-* HTML
-* CSS
-* JavaScript
-* python-dotenv
+---
 
+## 🖥️ Screenshots
 
-## Security
+| Welcome Screen | Chat in Action |
+|---|---|
+| ![Welcome](static/Screenshots/welcome.png) | ![Chat](static/Screenshots/chat.png) |
 
-API keys are stored securely using environment variables and are excluded from GitHub using .gitignore.
+---
 
-## Future Enhancements
+## 🛠️ Technologies Used
 
-* Chat history storage
-* User authentication
-* Voice input and output
-* File upload support
-* Dark mode
-* Multiple chat sessions
+| Layer | Technology |
+|---|---|
+| Backend | Python, Flask |
+| AI Engine | Google Gemini API |
+| Frontend | HTML, CSS, JavaScript |
+| Security | python-dotenv |
 
-## Author
+---
 
-Shreya Tatar
+## ⚙️ How to Run Locally
+
+### Prerequisites
+- Python 3.8+
+- Google Gemini API key ([Get one here](https://makersuite.google.com/app/apikey))
+
+### Steps
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Shreya-1101/AI-Chatbot-gemini.git
+cd AI-Chatbot-gemini
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Create a .env file and add your API key
+echo "GEMINI_API_KEY=your_api_key_here" > .env
+
+# 4. Run the app
+python app.py
+
+# 5. Open in browser
+http://127.0.0.1:5000
+```
+
+---
+
+## 🔐 Security
+
+API keys are stored using environment variables and excluded from version 
+control via `.gitignore` — no sensitive data is ever committed to the repository.
+
+---
+
+## 👩‍💻 Author
+
+**Shreya Tatar**  
