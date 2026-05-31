@@ -23,7 +23,7 @@ integrated with Google's Gemini API for intelligent, context-aware responses.
 
 | Welcome Screen | Chat in Action |
 |---|---|
-| ![Welcome](static/Screenshots/welcome.png) | ![Chat](static/Screenshots/chat.png) |
+| ![Welcome](static/Screenshots/Welcome.png) | ![Chat](static/Screenshots/Chat.png) |
 
 ---
 
